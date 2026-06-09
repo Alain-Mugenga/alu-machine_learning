@@ -1,0 +1,19 @@
+def definite_integral_inverse(lower, upper):
+    """
+    Returns the definite integral of 1/v dv from lower to upper limits
+    Input:
+        lower (int or float): lower limit
+        upper (int or float): upper limit
+    Returns:
+        str: 'undefined' if the integral is improper
+    """
+    if lower <= 0 <= upper:
+        return 'undefined'
+    else:
+        # Integral of 1/v is ln|v|
+        import math
+        return math.log(abs(upper)) - math.log(abs(lower))
+
+# Example usage
+if __name__ == "__main__":
+    print(definite_integral_inverse(-1, 0))  # Output: 'undefined'

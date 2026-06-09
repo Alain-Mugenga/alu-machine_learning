@@ -1,0 +1,15 @@
+def integral_of_exponential(coef):
+    """
+    Returns the indefinite integral of e^(coef*y) dy
+    Input:
+        coef (int or float): the coefficient of y in the exponent
+    Returns:
+        str: integral as a string including + C
+    """
+    if not isinstance(coef, (int, float)) or coef == 0:
+        return None
+    return f"e^{coef}y/{coef} + C"
+
+# Example usage
+if __name__ == "__main__":
+    print(integral_of_exponential(2))  # Output: e^2y/2 + C

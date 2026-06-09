@@ -1,0 +1,17 @@
+def definite_integral_x_dy(lower, upper, x):
+    """
+    Returns the definite integral of x dy from lower to upper limits
+    Input:
+        lower (int or float): lower limit
+        upper (int or float): upper limit
+        x (int or float): the constant coefficient
+    Returns:
+        float: definite integral value
+    """
+    if not all(isinstance(v, (int, float)) for v in (lower, upper, x)):
+        return None
+    return x * (upper - lower)
+
+# Example usage
+if __name__ == "__main__":
+    print(definite_integral_x_dy(0, 5, 1))  # Output: 5

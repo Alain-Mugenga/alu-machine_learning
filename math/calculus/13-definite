@@ -1,0 +1,17 @@
+def definite_integral_u_squared(lower, upper):
+    """
+    Returns the definite integral of u^2 du from lower to upper limits
+    Input:
+        lower (int or float): lower limit
+        upper (int or float): upper limit
+    Returns:
+        int or float: definite integral value
+    """
+    if not all(isinstance(x, (int, float)) for x in (lower, upper)):
+        return None
+    # Indefinite integral of u^2 is u^3/3
+    return (upper**3)/3 - (lower**3)/3
+
+# Example usage
+if __name__ == "__main__":
+    print(definite_integral_u_squared(0, 3))  # Output: 9

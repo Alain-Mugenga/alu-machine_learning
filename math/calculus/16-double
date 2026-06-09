@@ -1,0 +1,15 @@
+import math
+
+def double_integral_x2_over_y(x_lower, x_upper, y_lower, y_upper):
+    """
+    Computes the double integral of x^2 * y^-1 dx dy over given bounds
+    """
+    # Inner integral: ∫ x^2 dx from x_lower to x_upper
+    inner = (x_upper**3 - x_lower**3) / 3  # ∫ x^2 dx
+    # Outer integral: ∫ inner * 1/y dy from y_lower to y_upper
+    result = inner * (math.log(y_upper) - math.log(y_lower))
+    return result
+
+# Example usage
+if __name__ == "__main__":
+    print(double_integral_x2_over_y(0, 3, 1, 2))  # Output: 9*ln(2)
